@@ -4,13 +4,13 @@ import {getAuth, GoogleAuthProvider} from "firebase/auth";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBnIiRN0Vvkq6zV8pm-d34LRAJJ16sdTjA",
-  authDomain: "videocall-72680.firebaseapp.com",
-  projectId: "videocall-72680",
-  storageBucket: "videocall-72680.firebasestorage.app",
-  messagingSenderId: "444710395417",
-  appId: "1:444710395417:web:8192595be88497d57ed488",
-  measurementId: "G-50FV5FJG6N"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
