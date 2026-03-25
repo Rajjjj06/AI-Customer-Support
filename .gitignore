@@ -1,0 +1,14 @@
+# Root-level gitignore
+# Covers anything at the monorepo root
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Test embed file (local only, not for production)
+test-embed.html

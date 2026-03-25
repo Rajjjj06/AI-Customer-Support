@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Environment variables - NEVER commit these
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+combined.log
+error.log
+
+# ML model cache (downloaded by @xenova/transformers at runtime - large files)
+.cache/
+models/
+Xenova/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Build artifacts
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
