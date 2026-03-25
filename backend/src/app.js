@@ -18,7 +18,7 @@ app.use(express.json({ limit: "2mb" }));
 app.use(helmet());
 
 // Make sure to strip any trailing slash from the env variable!
-const frontendUrl = (process.env.FRONTEND_URL || "http://localhost:5173").replace(/\/$/, "");
+const frontendUrl = (process.env.FRONTEND_URL);
 app.use(cors({ origin: frontendUrl, credentials: true }));
 app.use(morgan("combined", { stream: morganStream }));
 
