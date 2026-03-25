@@ -13,13 +13,20 @@ export const login = async(req, res) => {
         }
         const decoded = await admin.auth().verifyIdToken(idToken);
         const {uid, name, email} = decoded;
-        let user = await User.findOne({firebaseId: uid});
-        if(!user){
+        // Search by email instead of firebaseId, since the Firebase project changed!
+        let user = await User.findOne({ email: email });
+        
+        if (!user) {
             user = new User({
                 firebaseId: uid,
                 name: name,
-                email:email
-            })
+                email: email
+            });
+        } else {
+            // Update the user's firebase ID in case it changed (e.g. new Firebase project)
+            if (user.firebaseId !== uid) {
+                user.firebaseId = uid;
+            }
         }
         await user.save();
         if(user){
