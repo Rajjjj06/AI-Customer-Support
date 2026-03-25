@@ -19,7 +19,7 @@ error.log
 
 # ML model cache (downloaded by @xenova/transformers at runtime - large files)
 .cache/
-models/
+# models/  <-- removed so we don't ignore our Mongoose models!
 Xenova/
 
 # OS files
